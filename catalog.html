@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню — Pizza, Bro!</title>
+    <meta name="description" content="Меню пиццерии Pizza, Bro!: пицца, напитки, десерты. Доставка за 30 минут.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="bg-blobs">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Pizza, Bro! — на главную">
+                <span class="logo__dot"></span>
+                Pizza, Bro!
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link nav__link--active">Меню</a></li>
+                    <li><a href="index.html#showcase" class="nav__link">Пиццы недели</a></li>
+                    <li><a href="index.html#sale-pizzas" class="nav__link">Акции</a></li>
+                    <li><a href="index.html#reviews" class="nav__link">Отзывы</a></li>
+                    <li><a href="index.html#features" class="nav__link">О нас</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Сменить тему">
+                    <span class="theme-toggle__icon">☀️</span>
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Корзина">
+                    <span>🛒</span>
+                    <span class="cart-btn__count" id="cartCount">0</span>
+                </button>
+                <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Контент каталога будет добавлен в следующем коммите -->
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+            <div class="footer__col footer__col--brand">
+                <a href="index.html" class="logo" aria-label="Pizza, Bro! — на главную">
+                    <span class="logo__dot"></span>
+                    Pizza, Bro!
+                </a>
+                <p>Пиццерия с дровяной печью.<br>Горячо, брат. С 2019 года.</p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+37500000000">8 (029) 000-00-00</a></li>
+                    <li><a href="mailto:hi@pizzabro.com">hi@pizzabro.com</a></li>
+                    <li>
+                        <a href="https://yandex.by/maps/geo/53177019/?ll=27.727503%2C53.882847&z=11.21"
+                           target="_blank" rel="noopener noreferrer">
+                            ул. Печная, 12
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Соцсети</h4>
+                <ul>
+                    <li><a href="https://t.me/heras8" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+                    <li><a href="https://vk.ru" target="_blank" rel="noopener noreferrer">VK</a></li>
+                    <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2026 Pizza, Bro!</p>
+            <p>
+                <a href="https://rs.school/" target="_blank" rel="noopener noreferrer">RS School</a>
+                ·
+                <a href="https://github.com/a-heras" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
