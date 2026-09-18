@@ -1,3 +1,7 @@
+/* ============================================================
+   ROOT VARIABLES
+   ============================================================ */
+
 :root {
     --bg: #0a0a0b;
     --bg-alt: #0f0f11;
@@ -323,7 +327,13 @@ section {
     color: #fff;
     background: var(--accent);
     box-shadow: var(--glow-btn);
-    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.nav__link--active:hover {
+    color: #fff;
+    background: var(--accent);
+    box-shadow: var(--glow-btn);
     cursor: not-allowed;
 }
 
@@ -581,12 +591,19 @@ section {
 }
 
 .hero__pizza {
-    font-size: 240px;
-    line-height: 1;
+    width: 320px;
+    height: 320px;
     position: relative;
     z-index: 1;
     filter: drop-shadow(0 20px 40px rgba(255, 75, 43, .3));
     animation: float 5s ease-in-out infinite;
+}
+
+.hero__pizza img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 @keyframes float {
@@ -680,7 +697,8 @@ section {
     }
 
     .hero__pizza {
-        font-size: 200px;
+        width: 260px;
+        height: 260px;
     }
 
     .hero__glow {
@@ -710,7 +728,8 @@ section {
     }
 
     .hero__pizza {
-        font-size: 170px;
+        width: 220px;
+        height: 220px;
     }
 
     .hero__glow {
@@ -750,7 +769,8 @@ section {
     }
 
     .hero__pizza {
-        font-size: 140px;
+        width: 180px;
+        height: 180px;
     }
 
     .hero__glow {
@@ -850,10 +870,17 @@ section {
 
 .carousel__pizza {
     position: relative;
-    font-size: 210px;
-    line-height: 1;
+    width: 280px;
+    height: 280px;
     filter: drop-shadow(0 20px 40px rgba(255, 75, 43, .3));
     animation: float 6s ease-in-out infinite;
+}
+
+.carousel__pizza img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .carousel__tag {
@@ -987,7 +1014,8 @@ section {
     }
 
     .carousel__pizza {
-        font-size: 180px;
+        width: 240px;
+        height: 240px;
     }
 }
 
@@ -1007,7 +1035,8 @@ section {
     }
 
     .carousel__pizza {
-        font-size: 170px;
+        width: 220px;
+        height: 220px;
     }
 }
 
@@ -1033,7 +1062,8 @@ section {
     }
 
     .carousel__pizza {
-        font-size: 120px;
+        width: 140px;
+        height: 140px;
         filter: drop-shadow(0 10px 20px rgba(255, 75, 43, .25));
     }
 
@@ -1117,7 +1147,8 @@ section {
     }
 
     .carousel__pizza {
-        font-size: 100px;
+        width: 120px;
+        height: 120px;
         filter: drop-shadow(0 8px 16px rgba(255, 75, 43, .2));
     }
 
@@ -1212,14 +1243,22 @@ section {
 }
 
 .sale-card__img {
-    font-size: 4rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 36px 0 8px;
     transition: var(--transition);
 }
 
+.sale-card__img img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
 .sale-card:hover .sale-card__img {
-    transform: scale(1.1) rotate(6deg);
+    transform: scale(1.08) rotate(6deg);
 }
 
 .sale-card__body {
