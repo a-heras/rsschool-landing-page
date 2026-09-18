@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
 
@@ -53,7 +54,395 @@
     </header>
 
     <main>
-        <!-- Контент каталога будет добавлен в следующем коммите -->
+
+        <!-- ================= CATALOG ================= -->
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <h1 class="section-title catalog__title">Наше меню</h1>
+                <p class="section-sub catalog__sub">Пицца из дровяной печи, напитки и десерты. Выбирай, бро.</p>
+
+                <div class="catalog__categories">
+
+                    <input type="radio" name="category" id="cat-all" class="catalog__radio" checked>
+                    <input type="radio" name="category" id="cat-pizza" class="catalog__radio">
+                    <input type="radio" name="category" id="cat-drinks" class="catalog__radio">
+                    <input type="radio" name="category" id="cat-desserts" class="catalog__radio">
+
+                    <div class="catalog__tabs" role="tablist" aria-label="Категории меню">
+                        <label for="cat-all" class="catalog__tab">Все</label>
+                        <label for="cat-pizza" class="catalog__tab">Пицца</label>
+                        <label for="cat-drinks" class="catalog__tab">Напитки</label>
+                        <label for="cat-desserts" class="catalog__tab">Десерты</label>
+                    </div>
+
+                    <div class="catalog__panels">
+
+                        <div class="catalog__panel catalog__panel--pizza">
+                            <h2 class="catalog__category-title">Пицца</h2>
+                            <div class="catalog__grid catalog__grid--pizza">
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-margherita.svg" alt="Пицца Маргарита с томатами, моцареллой и базиликом">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Маргарита</h3>
+                                        <p class="card__desc">Томаты, моцарелла, базилик. Классика, которая никогда не подводит.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 450 г</span>
+                                            <span class="price">15 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-pepperoni.svg" alt="Пицца Пепперони с острой салями и чили">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Пепперони</h3>
+                                        <p class="card__desc">Острая салями, моцарелла, чили. Для тех, кто любит поострее.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 480 г</span>
+                                            <span class="price">20 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-four-cheese.svg" alt="Пицца Четыре сыра с горгонзолой, дорблю, чеддером и моцареллой">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Четыре сыра</h3>
+                                        <p class="card__desc">Горгонзола, дорблю, чеддер, моцарелла. Сырный рай, бро.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 470 г</span>
+                                            <span class="price">23 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-hawaiian.svg" alt="Пицца Гавайская с курицей, ананасами и сыром">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Гавайская</h3>
+                                        <p class="card__desc">Курица, ананас, моцарелла. Спорная, но любимая.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 500 г</span>
+                                            <span class="price">22 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-bbq.svg" alt="Пицца Барбекю с курицей, луком и соусом барбекю">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Барбекю</h3>
+                                        <p class="card__desc">Курица, красный лук, соус BBQ. Дымный вкус.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 510 г</span>
+                                            <span class="price">24 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-mushroom.svg" alt="Пицца Грибная с шампиньонами и моцареллой">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Грибная</h3>
+                                        <p class="card__desc">Шампиньоны, моцарелла, трюфельное масло.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 460 г</span>
+                                            <span class="price">21 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-diablo.svg" alt="Пицца Дьябло с салями, халапеньо и чили">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Дьябло</h3>
+                                        <p class="card__desc">Салями, халапеньо, чили. Огонь, брат.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 490 г</span>
+                                            <span class="price">25 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/pizza-veggie.svg" alt="Пицца Вегетарианская с перцем, томатами и оливками">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Вегетарианская</h3>
+                                        <p class="card__desc">Перец, томаты, оливки, моцарелла. Без мяса.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">30 см · 440 г</span>
+                                            <span class="price">19 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+
+                        <div class="catalog__panel catalog__panel--drinks">
+                            <h2 class="catalog__category-title">Напитки</h2>
+                            <div class="catalog__grid catalog__grid--drinks">
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-lemonade.svg" alt="Домашний лимонад с мятой и лимоном">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Лимонад</h3>
+                                        <p class="card__desc">Домашний, с мятой и лимоном.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,5 л</span>
+                                            <span class="price">5 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-cola.svg" alt="Кола классическая">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Кола</h3>
+                                        <p class="card__desc">Классика, холодная.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,5 л</span>
+                                            <span class="price">4 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-juice.svg" alt="Апельсиновый сок">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Апельсиновый сок</h3>
+                                        <p class="card__desc">Свежевыжатый.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,3 л</span>
+                                            <span class="price">6 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-water.svg" alt="Минеральная вода без газа">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Вода</h3>
+                                        <p class="card__desc">Минеральная, без газа.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,5 л</span>
+                                            <span class="price">3 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-tea.svg" alt="Чёрный чай">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Чай</h3>
+                                        <p class="card__desc">Чёрный или зелёный.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,4 л</span>
+                                            <span class="price">3 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-coffee.svg" alt="Кофе американо">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Кофе</h3>
+                                        <p class="card__desc">Американо, свежесваренный.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,3 л</span>
+                                            <span class="price">5 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-milkshake.svg" alt="Молочный коктейль">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Милкшейк</h3>
+                                        <p class="card__desc">Ванильный или шоколадный.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,4 л</span>
+                                            <span class="price">7 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/drink-smoothie.svg" alt="Ягодный смузи">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Смузи</h3>
+                                        <p class="card__desc">Ягодный, без сахара.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">0,4 л</span>
+                                            <span class="price">8 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+
+                        <div class="catalog__panel catalog__panel--desserts">
+                            <h2 class="catalog__category-title">Десерты</h2>
+                            <div class="catalog__grid catalog__grid--desserts">
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-tiramisu.svg" alt="Тирамису с маскарпоне">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Тирамису</h3>
+                                        <p class="card__desc">Классический, с маскарпоне.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">150 г</span>
+                                            <span class="price">8 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-cheesecake.svg" alt="Чизкейк Нью-Йорк с ягодным соусом">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Чизкейк</h3>
+                                        <p class="card__desc">Нью-Йорк, с ягодным соусом.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">140 г</span>
+                                            <span class="price">7 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-brownie.svg" alt="Шоколадный брауни с орехами">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Брауни</h3>
+                                        <p class="card__desc">Шоколадный, с орехами.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">120 г</span>
+                                            <span class="price">6 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-panna-cotta.svg" alt="Панна котта с ванилью и ягодами">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Панна котта</h3>
+                                        <p class="card__desc">С ванилью и ягодами.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">130 г</span>
+                                            <span class="price">7 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-eclair.svg" alt="Эклер с заварным кремом">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Эклер</h3>
+                                        <p class="card__desc">С заварным кремом.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">90 г</span>
+                                            <span class="price">4 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-macaron.svg" alt="Миндальное пирожное макарон">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Макарон</h3>
+                                        <p class="card__desc">Миндальный, 3 шт.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">60 г</span>
+                                            <span class="price">5 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-ice-cream.svg" alt="Мороженое пломбир">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Мороженое</h3>
+                                        <p class="card__desc">Пломбир, 2 шарика.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">120 г</span>
+                                            <span class="price">5 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="card">
+                                    <div class="card__img">
+                                        <img src="images/dessert-pancakes.svg" alt="Панкейки с кленовым сиропом">
+                                    </div>
+                                    <div class="card__body">
+                                        <h3 class="card__title">Панкейки</h3>
+                                        <p class="card__desc">С кленовым сиропом.</p>
+                                        <div class="card__meta">
+                                            <span class="card__weight">180 г</span>
+                                            <span class="price">8 руб</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="catalog__more">
+                    <button class="btn btn--ghost catalog__more-btn" type="button">Показать ещё</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- ================= FOOTER ================= -->
