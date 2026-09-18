@@ -320,8 +320,11 @@ section {
 }
 
 .nav__link--active {
-    color: var(--text);
-    background: var(--card);
+    color: #fff;
+    background: var(--accent);
+    box-shadow: var(--glow-btn);
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 .header__actions {
