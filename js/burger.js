@@ -9,7 +9,6 @@
         burger.classList.add('burger--active');
         burger.setAttribute('aria-expanded', 'true');
         document.body.classList.add('no-scroll');
-        document.documentElement.classList.add('no-scroll');
     }
 
     function closeMenu() {
@@ -17,15 +16,12 @@
         burger.classList.remove('burger--active');
         burger.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('no-scroll');
-        document.documentElement.classList.remove('no-scroll');
     }
 
-    burger.addEventListener('click', () => {
-        if (nav.classList.contains('nav--open')) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
+    burger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = nav.classList.contains('nav--open');
+        isOpen ? closeMenu() : openMenu();
     });
 
     nav.querySelectorAll('.nav__link').forEach(link => {
@@ -36,15 +32,17 @@
         if (e.key === 'Escape') closeMenu();
     });
 
+    document.addEventListener('click', e => {
+        const isClickInsideNav = nav.contains(e.target);
+        const isOpen = nav.classList.contains('nav--open');
+        
+        if (!isClickInsideNav && isOpen) {
+            closeMenu();
+        }
+    });
+
     const mq = window.matchMedia('(max-width: 865px)');
-
-    function handleBreakpoint(e) {
+    mq.addEventListener('change', (e) => {
         if (!e.matches) closeMenu();
-    }
-
-    if (mq.addEventListener) {
-        mq.addEventListener('change', handleBreakpoint);
-    } else {
-        mq.addListener(handleBreakpoint);
-    }
+    });
 })();
