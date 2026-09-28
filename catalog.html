@@ -42,10 +42,29 @@
                 <button class="icon-btn" id="themeToggle" type="button" aria-label="Сменить тему">
                     <span class="theme-toggle__icon">☀️</span>
                 </button>
-                <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Корзина">
-                    <span>🛒</span>
-                    <span class="cart-btn__count" id="cartCount">0</span>
-                </button>
+
+                <div class="cart-wrapper">
+                    <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Корзина">
+                        <span>🛒</span>
+                        <span class="cart-btn__count" id="cartCount">0</span>
+                    </button>
+
+                    <div class="cart-dropdown" id="cartDropdown" hidden>
+                        <div class="cart-dropdown__header">
+                            <h3 class="cart-dropdown__title">Корзина</h3>
+                            <button class="cart-dropdown__clear" id="cartClear" type="button">Очистить</button>
+                        </div>
+                        <div class="cart-dropdown__body" id="cartBody"></div>
+                        <div class="cart-dropdown__footer">
+                            <div class="cart-dropdown__total">
+                                <span>Итого:</span>
+                                <strong id="cartTotal">0 руб</strong>
+                            </div>
+                            <button class="btn btn--primary cart-dropdown__checkout" type="button">Оформить</button>
+                        </div>
+                    </div>
+                </div>
+
                 <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>

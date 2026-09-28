@@ -9,6 +9,7 @@
         burger.classList.add('burger--active');
         burger.setAttribute('aria-expanded', 'true');
         document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('no-scroll');
     }
 
     function closeMenu() {
@@ -16,6 +17,7 @@
         burger.classList.remove('burger--active');
         burger.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
     }
 
     burger.addEventListener('click', () => {

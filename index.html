@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza, Bro! — Горячо, брат</title>
-    <meta name="description" content="Пиццерия Pizza, Bro!: пицца на дровах за 30 минут. Тесто на закваске, дружеская доставка.">
+    <meta name="description" content="Пиццерия Pizza, Bro!: пицца на дровах за 30 минут. Тесто на закваске, быстрая доставка.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,10 +41,29 @@
                 <button class="icon-btn" id="themeToggle" type="button" aria-label="Сменить тему">
                     <span class="theme-toggle__icon">☀️</span>
                 </button>
-                <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Корзина">
-                    <span>🛒</span>
-                    <span class="cart-btn__count" id="cartCount">0</span>
-                </button>
+
+                <div class="cart-wrapper">
+                    <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Корзина">
+                        <span>🛒</span>
+                        <span class="cart-btn__count" id="cartCount">0</span>
+                    </button>
+
+                    <div class="cart-dropdown" id="cartDropdown" hidden>
+                        <div class="cart-dropdown__header">
+                            <h3 class="cart-dropdown__title">Корзина</h3>
+                            <button class="cart-dropdown__clear" id="cartClear" type="button">Очистить</button>
+                        </div>
+                        <div class="cart-dropdown__body" id="cartBody"></div>
+                        <div class="cart-dropdown__footer">
+                            <div class="cart-dropdown__total">
+                                <span>Итого:</span>
+                                <strong id="cartTotal">0 руб</strong>
+                            </div>
+                            <button class="btn btn--primary cart-dropdown__checkout" type="button">Оформить</button>
+                        </div>
+                    </div>
+                </div>
+
                 <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
@@ -149,10 +168,10 @@
                                             Томаты, моцарелла, базилик. Классика, которая никогда не подводит.
                                         </p>
                                         <span class="carousel__price">15 руб</span>
-                                        <a href="catalog.html" class="btn btn--primary carousel__btn">
+                                        <button class="btn btn--primary carousel__btn" type="button" data-add-simple="pizza-margherita">
                                             В корзину
                                             <span>→</span>
-                                        </a>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -174,10 +193,10 @@
                                             Острая салями, моцарелла, чили. Для тех, кто любит поострее.
                                         </p>
                                         <span class="carousel__price">20 руб</span>
-                                        <a href="catalog.html" class="btn btn--primary carousel__btn">
+                                        <button class="btn btn--primary carousel__btn" type="button" data-add-simple="pizza-pepperoni">
                                             В корзину
                                             <span>→</span>
-                                        </a>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -199,10 +218,10 @@
                                             Горгонзола, дорблю, чеддер, моцарелла. Сырный рай, бро.
                                         </p>
                                         <span class="carousel__price">23 руб</span>
-                                        <a href="catalog.html" class="btn btn--primary carousel__btn">
+                                        <button class="btn btn--primary carousel__btn" type="button" data-add-simple="pizza-four-cheese">
                                             В корзину
                                             <span>→</span>
-                                        </a>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -253,7 +272,7 @@
                             <p>Любые две пиццы 30 см — по цене одной. Каждый вторник.</p>
                             <div class="sale-card__bottom">
                                 <span class="price">от 15 руб</span>
-                                <button class="btn btn--small" type="button">Заказать</button>
+                                <a href="catalog.html" class="btn btn--small">Заказать</a>
                             </div>
                         </div>
                     </article>
@@ -268,7 +287,7 @@
                             <p>Две пиццы 30 см + лимонад. Вместо 39 руб — 33 руб.</p>
                             <div class="sale-card__bottom">
                                 <span class="price">33 руб</span>
-                                <button class="btn btn--small" type="button">Заказать</button>
+                                <a href="catalog.html" class="btn btn--small">Заказать</a>
                             </div>
                         </div>
                     </article>
@@ -283,7 +302,7 @@
                             <p>При заказе от 33 руб — домашний лимонад бесплатно.</p>
                             <div class="sale-card__bottom">
                                 <span class="price">0 руб</span>
-                                <button class="btn btn--small" type="button">Заказать</button>
+                                <a href="catalog.html" class="btn btn--small">Заказать</a>
                             </div>
                         </div>
                     </article>
@@ -298,7 +317,7 @@
                             <p>Пицца в подарок имениннику при заказе от 50 руб.</p>
                             <div class="sale-card__bottom">
                                 <span class="price">0 руб</span>
-                                <button class="btn btn--small" type="button">Заказать</button>
+                                <a href="catalog.html" class="btn btn--small">Заказать</a>
                             </div>
                         </div>
                     </article>
@@ -445,8 +464,10 @@
         </div>
     </footer>
 
+    <script src="js/products.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>

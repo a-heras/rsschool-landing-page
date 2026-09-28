@@ -46,6 +46,7 @@
     });
 
     document.addEventListener('keydown', e => {
+        if (e.target.closest('input, textarea, [contenteditable]')) return;
         if (e.key === 'ArrowRight') next();
         if (e.key === 'ArrowLeft') prev();
     });
