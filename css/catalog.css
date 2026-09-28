@@ -190,12 +190,16 @@
 .catalog__more {
     display: flex;
     justify-content: center;
-    margin-top: 56px;
+    margin-top: 40px;
 }
 
 .catalog__more-btn {
     cursor: pointer;
     user-select: none;
+}
+
+.catalog__more-btn[hidden] {
+    display: none;
 }
 
 @media (max-width: 1024px) {
