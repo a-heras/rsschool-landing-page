@@ -9,13 +9,13 @@ window.products = [
         weight: '30 см · 450 г',
         price: 15,
         sizes: [
-            { label: '25 см', price: 12 },
-            { label: '30 см', price: 15 },
-            { label: '35 см', price: 18 }
+            { label: '25 см', price: 12, weight: 350 },
+            { label: '30 см', price: 15, weight: 450 },
+            { label: '35 см', price: 18, weight: 600 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -27,13 +27,13 @@ window.products = [
         weight: '30 см · 480 г',
         price: 20,
         sizes: [
-            { label: '25 см', price: 16 },
-            { label: '30 см', price: 20 },
-            { label: '35 см', price: 24 }
+            { label: '25 см', price: 16, weight: 380 },
+            { label: '30 см', price: 20, weight: 480 },
+            { label: '35 см', price: 24, weight: 640 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -45,13 +45,13 @@ window.products = [
         weight: '30 см · 470 г',
         price: 23,
         sizes: [
-            { label: '25 см', price: 19 },
-            { label: '30 см', price: 23 },
-            { label: '35 см', price: 27 }
+            { label: '25 см', price: 19, weight: 370 },
+            { label: '30 см', price: 23, weight: 470 },
+            { label: '35 см', price: 27, weight: 620 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -63,13 +63,13 @@ window.products = [
         weight: '30 см · 500 г',
         price: 22,
         sizes: [
-            { label: '25 см', price: 18 },
-            { label: '30 см', price: 22 },
-            { label: '35 см', price: 26 }
+            { label: '25 см', price: 18, weight: 400 },
+            { label: '30 см', price: 22, weight: 500 },
+            { label: '35 см', price: 26, weight: 660 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -81,13 +81,13 @@ window.products = [
         weight: '30 см · 510 г',
         price: 24,
         sizes: [
-            { label: '25 см', price: 20 },
-            { label: '30 см', price: 24 },
-            { label: '35 см', price: 28 }
+            { label: '25 см', price: 20, weight: 400 },
+            { label: '30 см', price: 24, weight: 510 },
+            { label: '35 см', price: 28, weight: 680 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -99,13 +99,13 @@ window.products = [
         weight: '30 см · 460 г',
         price: 21,
         sizes: [
-            { label: '25 см', price: 17 },
-            { label: '30 см', price: 21 },
-            { label: '35 см', price: 25 }
+            { label: '25 см', price: 17, weight: 360 },
+            { label: '30 см', price: 21, weight: 460 },
+            { label: '35 см', price: 25, weight: 610 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -117,13 +117,13 @@ window.products = [
         weight: '30 см · 490 г',
         price: 25,
         sizes: [
-            { label: '25 см', price: 21 },
-            { label: '30 см', price: 25 },
-            { label: '35 см', price: 29 }
+            { label: '25 см', price: 21, weight: 390 },
+            { label: '30 см', price: 25, weight: 490 },
+            { label: '35 см', price: 29, weight: 650 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -135,16 +135,15 @@ window.products = [
         weight: '30 см · 440 г',
         price: 19,
         sizes: [
-            { label: '25 см', price: 15 },
-            { label: '30 см', price: 19 },
-            { label: '35 см', price: 23 }
+            { label: '25 см', price: 15, weight: 340 },
+            { label: '30 см', price: 19, weight: 440 },
+            { label: '35 см', price: 23, weight: 580 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
-    /* --- скрытые (показываются через «Показать ещё») --- */
     {
         id: 'pizza-carbonara',
         category: 'pizza',
@@ -154,13 +153,13 @@ window.products = [
         weight: '30 см · 520 г',
         price: 26,
         sizes: [
-            { label: '25 см', price: 22 },
-            { label: '30 см', price: 26 },
-            { label: '35 см', price: 30 }
+            { label: '25 см', price: 22, weight: 410 },
+            { label: '30 см', price: 26, weight: 520 },
+            { label: '35 см', price: 30, weight: 690 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -172,13 +171,13 @@ window.products = [
         weight: '30 см · 470 г',
         price: 27,
         sizes: [
-            { label: '25 см', price: 23 },
-            { label: '30 см', price: 27 },
-            { label: '35 см', price: 31 }
+            { label: '25 см', price: 23, weight: 370 },
+            { label: '30 см', price: 27, weight: 470 },
+            { label: '35 см', price: 31, weight: 620 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -190,13 +189,13 @@ window.products = [
         weight: '30 см · 530 г',
         price: 28,
         sizes: [
-            { label: '25 см', price: 24 },
-            { label: '30 см', price: 28 },
-            { label: '35 см', price: 32 }
+            { label: '25 см', price: 24, weight: 420 },
+            { label: '30 см', price: 28, weight: 530 },
+            { label: '35 см', price: 32, weight: 700 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
     {
@@ -208,13 +207,13 @@ window.products = [
         weight: '30 см · 540 г',
         price: 26,
         sizes: [
-            { label: '25 см', price: 22 },
-            { label: '30 см', price: 26 },
-            { label: '35 см', price: 30 }
+            { label: '25 см', price: 22, weight: 430 },
+            { label: '30 см', price: 26, weight: 540 },
+            { label: '35 см', price: 30, weight: 710 }
         ],
         dough: [
-            { label: 'Тонкое', price: 0 },
-            { label: 'Пышное', price: 2 }
+            { label: 'Тонкое', price: 0, weight: 0 },
+            { label: 'Пышное', price: 2, weight: 50 }
         ]
     },
 
@@ -228,8 +227,8 @@ window.products = [
         weight: '0,5 л',
         price: 5,
         sizes: [
-            { label: '0,3 л', price: 4 },
-            { label: '0,5 л', price: 5 }
+            { label: '0,3 л', price: 4, weight: 300 },
+            { label: '0,5 л', price: 5, weight: 500 }
         ],
         dough: []
     },
@@ -242,8 +241,8 @@ window.products = [
         weight: '0,5 л',
         price: 4,
         sizes: [
-            { label: '0,3 л', price: 3 },
-            { label: '0,5 л', price: 4 }
+            { label: '0,3 л', price: 3, weight: 300 },
+            { label: '0,5 л', price: 4, weight: 500 }
         ],
         dough: []
     },
@@ -256,8 +255,8 @@ window.products = [
         weight: '0,3 л',
         price: 6,
         sizes: [
-            { label: '0,3 л', price: 6 },
-            { label: '0,5 л', price: 9 }
+            { label: '0,3 л', price: 6, weight: 300 },
+            { label: '0,5 л', price: 9, weight: 500 }
         ],
         dough: []
     },
@@ -270,7 +269,7 @@ window.products = [
         weight: '0,5 л',
         price: 3,
         sizes: [
-            { label: '0,5 л', price: 3 }
+            { label: '0,5 л', price: 3, weight: 500 }
         ],
         dough: []
     },
@@ -283,8 +282,8 @@ window.products = [
         weight: '0,4 л',
         price: 3,
         sizes: [
-            { label: '0,3 л', price: 3 },
-            { label: '0,4 л', price: 4 }
+            { label: '0,3 л', price: 3, weight: 300 },
+            { label: '0,4 л', price: 4, weight: 400 }
         ],
         dough: []
     },
@@ -297,8 +296,8 @@ window.products = [
         weight: '0,3 л',
         price: 5,
         sizes: [
-            { label: '0,2 л', price: 4 },
-            { label: '0,3 л', price: 5 }
+            { label: '0,2 л', price: 4, weight: 200 },
+            { label: '0,3 л', price: 5, weight: 300 }
         ],
         dough: []
     },
@@ -311,8 +310,8 @@ window.products = [
         weight: '0,4 л',
         price: 7,
         sizes: [
-            { label: '0,3 л', price: 6 },
-            { label: '0,4 л', price: 7 }
+            { label: '0,3 л', price: 6, weight: 300 },
+            { label: '0,4 л', price: 7, weight: 400 }
         ],
         dough: []
     },
@@ -325,8 +324,8 @@ window.products = [
         weight: '0,4 л',
         price: 8,
         sizes: [
-            { label: '0,3 л', price: 7 },
-            { label: '0,4 л', price: 8 }
+            { label: '0,3 л', price: 7, weight: 300 },
+            { label: '0,4 л', price: 8, weight: 400 }
         ],
         dough: []
     },
@@ -341,8 +340,8 @@ window.products = [
         weight: '150 г',
         price: 8,
         sizes: [
-            { label: '100 г', price: 6 },
-            { label: '150 г', price: 8 }
+            { label: '100 г', price: 6, weight: 100 },
+            { label: '150 г', price: 8, weight: 150 }
         ],
         dough: []
     },
@@ -355,8 +354,8 @@ window.products = [
         weight: '140 г',
         price: 7,
         sizes: [
-            { label: '100 г', price: 5 },
-            { label: '140 г', price: 7 }
+            { label: '100 г', price: 5, weight: 100 },
+            { label: '140 г', price: 7, weight: 140 }
         ],
         dough: []
     },
@@ -369,8 +368,8 @@ window.products = [
         weight: '120 г',
         price: 6,
         sizes: [
-            { label: '100 г', price: 5 },
-            { label: '120 г', price: 6 }
+            { label: '100 г', price: 5, weight: 100 },
+            { label: '120 г', price: 6, weight: 120 }
         ],
         dough: []
     },
@@ -383,8 +382,8 @@ window.products = [
         weight: '130 г',
         price: 7,
         sizes: [
-            { label: '100 г', price: 5 },
-            { label: '130 г', price: 7 }
+            { label: '100 г', price: 5, weight: 100 },
+            { label: '130 г', price: 7, weight: 130 }
         ],
         dough: []
     },
@@ -397,7 +396,7 @@ window.products = [
         weight: '90 г',
         price: 4,
         sizes: [
-            { label: '90 г', price: 4 }
+            { label: '90 г', price: 4, weight: 90 }
         ],
         dough: []
     },
@@ -410,7 +409,7 @@ window.products = [
         weight: '60 г',
         price: 5,
         sizes: [
-            { label: '60 г', price: 5 }
+            { label: '60 г', price: 5, weight: 60 }
         ],
         dough: []
     },
@@ -423,7 +422,7 @@ window.products = [
         weight: '120 г',
         price: 5,
         sizes: [
-            { label: '120 г', price: 5 }
+            { label: '120 г', price: 5, weight: 120 }
         ],
         dough: []
     },
@@ -436,7 +435,7 @@ window.products = [
         weight: '180 г',
         price: 8,
         sizes: [
-            { label: '180 г', price: 8 }
+            { label: '180 г', price: 8, weight: 180 }
         ],
         dough: []
     }
