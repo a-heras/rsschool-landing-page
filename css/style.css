@@ -1082,7 +1082,7 @@ section {
     }
 
     .carousel__stage {
-        padding-bottom: 60px;
+        padding-bottom: 80px;
     }
 
     .carousel__inner {
@@ -1763,6 +1763,59 @@ section {
 
     .footer__col ul {
         align-items: center;
+    }
+}
+
+/* ============================================================
+   CAROUSEL DOTS
+   ============================================================ */
+
+.carousel__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-hover);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel__dot:hover {
+    background: var(--accent);
+}
+
+.carousel__dot--active {
+    background: var(--accent);
+    box-shadow: var(--glow-btn);
+    width: 28px;
+    border-radius: var(--radius-pill);
+}
+
+@media (max-width: 768px) {
+    .carousel__dots {
+        bottom: 56px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel__dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .carousel__dot--active {
+        width: 22px;
     }
 }
 
