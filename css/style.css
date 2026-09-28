@@ -258,8 +258,10 @@ section {
    ============================================================ */
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: rgba(10, 10, 11, .6);
     backdrop-filter: saturate(180%) blur(20px);
@@ -463,18 +465,19 @@ section {
     }
 }
 
+/* Мобильный nav — скрыт по умолчанию */
+.nav--mobile {
+    display: none;
+}
+
 @media (max-width: 865px) {
-    .header {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        background: var(--bg);
+    /* Header НЕ меняем — работает как на десктопе, с blur */
+
+    .nav--desktop {
+        display: none;
     }
 
-    [data-theme="light"] .header {
-        background: var(--bg);
-    }
-
-    .nav {
+    .nav--mobile {
         position: fixed;
         top: 68px;
         left: 0;
@@ -493,20 +496,20 @@ section {
         height: calc(100vh - 68px);
     }
 
-    .nav--open {
+    .nav--mobile.nav--open {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    .nav__list {
+    .nav--mobile .nav__list {
         flex-direction: column;
         gap: 8px;
         align-items: stretch;
         width: 100%;
     }
 
-    .nav__link {
+    .nav--mobile .nav__link {
         display: block;
         padding: 14px 20px;
         background: var(--card);
@@ -516,7 +519,7 @@ section {
         font-size: 1rem;
     }
 
-    .nav__link--active {
+    .nav--mobile .nav__link--active {
         background: var(--accent);
         border-color: var(--accent);
     }
@@ -874,6 +877,44 @@ section {
 }
 
 /* ============================================================
+   CAROUSEL DOTS — базовый
+   ============================================================ */
+
+.carousel__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-hover);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+@media (hover: hover) {
+    .carousel__dot:hover {
+        background: var(--accent);
+    }
+}
+
+.carousel__dot--active {
+    background: var(--accent);
+    box-shadow: var(--glow-btn);
+    width: 28px;
+    border-radius: var(--radius-pill);
+}
+
+/* ============================================================
    CAROUSEL
    ============================================================ */
 
@@ -1118,7 +1159,7 @@ section {
     }
 
     .carousel__stage {
-        padding-bottom: 80px;
+        padding-bottom: 70px;
     }
 
     .carousel__inner {
@@ -1190,10 +1231,8 @@ section {
         margin-right: -50px;
     }
 
-    @media (hover: hover) {
-        .carousel__arrow:hover {
-            transform: translateY(-2px);
-        }
+    .carousel__dots {
+        bottom: 55px;
     }
 }
 
@@ -1207,7 +1246,7 @@ section {
     }
 
     .carousel__stage {
-        padding-bottom: 56px;
+        padding-bottom: 64px;
     }
 
     .carousel__inner {
@@ -1246,17 +1285,36 @@ section {
     }
 
     .carousel__arrow {
+        top: auto;
+        bottom: 0;
         width: 38px;
         height: 38px;
         font-size: .9rem;
     }
 
     .carousel__arrow--prev {
+        left: 50%;
+        right: auto;
         margin-left: -44px;
     }
 
     .carousel__arrow--next {
+        right: 50%;
+        left: auto;
         margin-right: -44px;
+    }
+
+    .carousel__dots {
+        bottom: 46px;
+    }
+
+    .carousel__dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .carousel__dot--active {
+        width: 22px;
     }
 }
 
@@ -1819,61 +1877,6 @@ section {
 
     .footer__col ul {
         align-items: center;
-    }
-}
-
-/* ============================================================
-   CAROUSEL DOTS
-   ============================================================ */
-
-.carousel__dots {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 3;
-}
-
-.carousel__dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--border-hover);
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-@media (hover: hover) {
-    .carousel__dot:hover {
-        background: var(--accent);
-    }
-}
-
-.carousel__dot--active {
-    background: var(--accent);
-    box-shadow: var(--glow-btn);
-    width: 28px;
-    border-radius: var(--radius-pill);
-}
-
-@media (max-width: 768px) {
-    .carousel__dots {
-        bottom: 56px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel__dot {
-        width: 8px;
-        height: 8px;
-    }
-
-    .carousel__dot--active {
-        width: 22px;
     }
 }
 

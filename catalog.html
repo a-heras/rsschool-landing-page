@@ -27,7 +27,7 @@
                 Pizza, Bro!
             </a>
 
-            <nav class="nav" id="nav" aria-label="Основная навигация">
+            <nav class="nav nav--desktop" aria-label="Основная навигация">
                 <ul class="nav__list">
                     <li><a href="index.html" class="nav__link">Главная</a></li>
                     <li><a href="catalog.html" class="nav__link nav__link--active">Меню</a></li>
@@ -71,6 +71,17 @@
             </div>
         </div>
     </header>
+
+    <nav class="nav nav--mobile" id="nav" aria-label="Мобильная навигация">
+        <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Главная</a></li>
+            <li><a href="catalog.html" class="nav__link nav__link--active">Меню</a></li>
+            <li><a href="index.html#showcase" class="nav__link">Пиццы недели</a></li>
+            <li><a href="index.html#sale-pizzas" class="nav__link">Акции</a></li>
+            <li><a href="index.html#reviews" class="nav__link">Отзывы</a></li>
+            <li><a href="index.html#features" class="nav__link">О нас</a></li>
+        </ul>
+    </nav>
 
     <main>
 
@@ -187,9 +198,9 @@
         </div>
     </div>
 
+    <script src="js/products.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/burger.js"></script>
-    <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/catalog.js"></script>
     <script src="js/modal.js"></script>
